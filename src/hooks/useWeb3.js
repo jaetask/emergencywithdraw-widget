@@ -25,7 +25,6 @@ const useWeb3 = () => {
     web3: undefined,
     chainId: undefined,
   });
-  console.log("web3 starting")
   const connectWeb3 = () => {
     const connect = async () => {
       console.log("web3 connecting")
@@ -44,7 +43,7 @@ const useWeb3 = () => {
         });
   }
   useEffect(() => {
-    connectWeb3();
+    connectWeb3()
   }, [provider, web3info]);
 
   // const disconnect = async () => {
