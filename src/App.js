@@ -24,6 +24,7 @@ function App() {
   }, [web3]);
 
   const onStart = async (masterchefAddress_) => {
+    console.log("searching: " + masterchefAddress_)
     setMasterchefAddress(masterchefAddress_);
   };
 

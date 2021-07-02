@@ -14,7 +14,6 @@ const providerOptions = {
 };
 
 const web3Modal = new Web3Modal({
-  network: "mainnet", // optional
   cacheProvider: true, // optional
   providerOptions, // required
 });
@@ -32,7 +31,6 @@ const useWeb3 = () => {
       setProvider(provider_);
       const web3 = new Web3(provider_);
       const chainId = await web3.eth.net.getId();
-
       return { web3, chainId };
     };
     connect().then((info) => {
