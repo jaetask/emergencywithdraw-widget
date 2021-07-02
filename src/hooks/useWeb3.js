@@ -25,15 +25,22 @@ const useWeb3 = () => {
     web3: undefined,
     chainId: undefined,
   });
+  console.log("web3 starting")
   useEffect(() => {
     const connect = async () => {
+
+  console.log("web3 connecting")
       const provider_ = await web3Modal.connect();
       setProvider(provider_);
+      console.log("web3 web3img")
       const web3 = new Web3(provider_);
+      console.log("web3:" + web3)
       const chainId = await web3.eth.net.getId();
+      console.log("web3 ready")
       return { web3, chainId };
     };
     connect().then((info) => {
+      console.log("web3:" + info)
       setWeb3Info(info);
     });
   }, [provider]);
