@@ -21,6 +21,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 13.x
+    - name: Install
+      run: yarn install
     - name: Build project
       run: yarn run build
     - name: Upload production-ready build files
