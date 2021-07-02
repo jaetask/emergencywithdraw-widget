@@ -8,7 +8,7 @@ import { ZERO_ADDRESS } from "./utils/addressHelper";
 import useWeb3 from "./hooks/useWeb3";
 
 function App() {
-  const web3 = useWeb3();
+  const [web3, connectWeb3]  = useWeb3();
   const [masterchefAddress, setMasterchefAddress] = useState(undefined);
   const [userAddress, setUserAddress] = useState(ZERO_ADDRESS);
   useEffect(() => {
@@ -24,6 +24,7 @@ function App() {
   }, [web3]);
 
   const onStart = async (masterchefAddress_) => {
+    await connectWeb3();
     console.log("searching: " + masterchefAddress_)
     setMasterchefAddress(masterchefAddress_);
   };

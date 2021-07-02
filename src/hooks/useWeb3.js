@@ -26,23 +26,25 @@ const useWeb3 = () => {
     chainId: undefined,
   });
   console.log("web3 starting")
-  useEffect(() => {
+  const connectWeb3 = () => {
     const connect = async () => {
-
-  console.log("web3 connecting")
-      const provider_ = await web3Modal.connect();
-      setProvider(provider_);
-      console.log("web3 web3img")
-      const web3 = new Web3(provider_);
-      console.log("web3:" + web3)
-      const chainId = await web3.eth.net.getId();
-      console.log("web3 ready")
-      return { web3, chainId };
-    };
-    connect().then((info) => {
-      console.log("web3:" + info)
-      setWeb3Info(info);
-    });
+      console.log("web3 connecting")
+          const provider_ = await web3Modal.connect();
+          setProvider(provider_);
+          console.log("web3 web3img")
+          const web3 = new Web3(provider_);
+          console.log("web3:" + web3)
+          const chainId = await web3.eth.net.getId();
+          console.log("web3 ready")
+          return { web3, chainId };
+        };
+        connect().then((info) => {
+          console.log("web3:" + info)
+          setWeb3Info(info);
+        });
+  }
+  useEffect(() => {
+    connectWeb3();
   }, [provider]);
 
   // const disconnect = async () => {
@@ -56,7 +58,7 @@ const useWeb3 = () => {
   //   setWeb3Info(undefined);
   // };
 
-  return web3info;
+  return [web3info, connectWeb3];
 };
 
 export default useWeb3;
