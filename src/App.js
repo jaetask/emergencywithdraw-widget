@@ -2,10 +2,9 @@ import "./App.css";
 
 import Pools from "./components/Pools";
 import MasterchefSearch from "./components/MasterchefSearch";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AddressContext from "./contexts/AddressContext";
 import { ZERO_ADDRESS } from "./utils/addressHelper";
-import { useEffect } from "react/cjs/react.development";
 import useWeb3 from "./hooks/useWeb3";
 
 function App() {
