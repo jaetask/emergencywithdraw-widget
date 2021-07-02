@@ -12,7 +12,7 @@ function Pool(props) {
         avatar={
           <Avatar src="https://cryptologos.cc/logos/binance-usd-busd-logo.svg?v=010" />
         }
-        title={<a target="_blank" href={getAddressLink(chainId,want)}>{name} - pid: {pid}</a>}
+        title={<a target="_blank" rel="noreferrer" href={getAddressLink(chainId,want)}>{name} - pid: {pid}</a>}
         description={amount + " " + symbol}
       />
 

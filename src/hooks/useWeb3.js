@@ -40,16 +40,16 @@ const useWeb3 = () => {
     });
   }, [provider]);
 
-  const disconnect = async () => {
-    // explicitly close when wallet connect is used
-    if (provider && provider.close) {
-      await provider.close();
-    }
-    web3Modal.clearCachedProvider();
+  // const disconnect = async () => {
+  //   // explicitly close when wallet connect is used
+  //   if (provider && provider.close) {
+  //     await provider.close();
+  //   }
+  //   web3Modal.clearCachedProvider();
 
-    setProvider(undefined);
-    setWeb3Info(undefined);
-  };
+  //   setProvider(undefined);
+  //   setWeb3Info(undefined);
+  // };
 
   return web3info;
 };

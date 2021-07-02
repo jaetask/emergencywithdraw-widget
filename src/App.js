@@ -22,7 +22,7 @@ function App() {
     }
 
     setUserAddress(web3.currentProvider.selectedAddress);
-  });
+  }, [web3]);
 
   const onStart = async (masterchefAddress_) => {
     setMasterchefAddress(masterchefAddress_);

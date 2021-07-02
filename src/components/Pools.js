@@ -1,4 +1,4 @@
-import { List, Row, Col, Divider, Space } from "antd";
+import { List, Divider } from "antd";
 import emergencyWithdraw from "../actions/emergencyWithdraw";
 import usePools from "../hooks/usePools";
 import useWeb3 from "../hooks/useWeb3";
