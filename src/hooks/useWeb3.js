@@ -8,7 +8,7 @@ const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider,
     options: {
-      infuraId: "INFURA_ID", // required, TODO: still needs to be set to our infura_id.
+      infuraId: "5b7ed00b5a864d5797572f8cfcc5052e", // required, TODO: still needs to be set to our infura_id.
     },
   },
 };
