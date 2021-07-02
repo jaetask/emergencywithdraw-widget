@@ -45,7 +45,7 @@ const useWeb3 = () => {
   }
   useEffect(() => {
     connectWeb3();
-  }, [provider]);
+  }, [provider, web3info]);
 
   // const disconnect = async () => {
   //   // explicitly close when wallet connect is used

@@ -21,7 +21,7 @@ function App() {
     }
 
     setUserAddress(web3.currentProvider.selectedAddress);
-  }, [web3]);
+  }, [web3, userAddress]);
 
   const onStart = async (masterchefAddress_) => {
     await connectWeb3();
